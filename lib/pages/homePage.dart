@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/main.dart';
+import 'package:flutter_application_1/mainfrfr.dart';
+import 'package:flutter_application_1/notifier.dart';
+import 'package:flutter_application_1/pages/Register.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -70,15 +74,11 @@ class HomePage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.black),
                 ),
                 onPressed: () {
-                  // Assuming you are using Form.of(context) in a valid context
-                  if (Form.of(context)!.validate()) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SecondRoute(),
-                      ),
-                    );
-                  }
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) {
+                      return const Mainfrfr();
+                    },
+                  ));
                 },
                 child: const Text(
                   "Login",
@@ -93,7 +93,13 @@ class HomePage extends StatelessWidget {
                     const Text("Not a user yet? "),
                     const Padding(padding: EdgeInsets.all(5)),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) {
+                            return const Register();
+                          },
+                        ));
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(Colors.blue),
                       ),
@@ -109,6 +115,20 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            isDarkMode.value = !isDarkMode.value;
+          },
+          child: ValueListenableBuilder(
+            valueListenable: isDarkMode,
+            builder: (context, isDark, child) {
+              if (!isDark) {
+                return const Icon(Icons.dark_mode);
+              } else {
+                return const Icon(Icons.light_mode);
+              }
+            },
+          )),
     );
   }
 }
