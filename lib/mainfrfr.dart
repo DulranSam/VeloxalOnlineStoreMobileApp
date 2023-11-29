@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tshirts.dart';
 
@@ -26,8 +28,8 @@ class _MainfrfrState extends State<Mainfrfr> {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
                       child: Row(
                         children: [
                           ElevatedButton(
@@ -46,7 +48,7 @@ class _MainfrfrState extends State<Mainfrfr> {
                                   builder: (context) {
                                     return Scaffold(
                                       appBar: AppBar(
-                                        title: const Text("Wtf lmao"),
+                                        title: const Text("Hoodies"),
                                       ),
                                     );
                                   },
@@ -54,17 +56,72 @@ class _MainfrfrState extends State<Mainfrfr> {
                               },
                               child: const Text("Hoodies")),
                           ElevatedButton(
-                              onPressed: () {}, child: const Text("Cases")),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) {
+                                    return Scaffold(
+                                      appBar: AppBar(
+                                        title: const Text("Cases"),
+                                      ),
+                                    );
+                                  },
+                                ));
+                              },
+                              child: const Text("Cases")),
                           ElevatedButton(
-                              onPressed: () {}, child: const Text("Shoes")),
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) {
+                                    return Scaffold(
+                                      appBar: AppBar(
+                                        title: const Text("Shoes"),
+                                      ),
+                                    );
+                                  },
+                                ));
+                              },
+                              child: const Text("Shoes")),
                         ],
                       ),
                     ),
+                    const Padding(
+                      padding: EdgeInsets.all(10),
+                    ),
                     const Text(
-                      "Home",
+                      "Featured",
                       style: TextStyle(fontSize: 28),
                     ),
                     const Padding(padding: EdgeInsets.all(10)),
+                    ElevatedButton(
+                        onPressed: () => {},
+                        child: Card(
+                          margin: const EdgeInsets.all(10),
+                          color: Colors.black,
+                          clipBehavior: Clip.hardEdge,
+                          child: Image.network(
+                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                          ),
+                        )),
+                    ElevatedButton(
+                        onPressed: () => {},
+                        child: Card(
+                          margin: const EdgeInsets.all(10),
+                          color: Colors.black,
+                          clipBehavior: Clip.hardEdge,
+                          child: Image.network(
+                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                          ),
+                        )),
+                    ElevatedButton(
+                        onPressed: () => {},
+                        child: Card(
+                          margin: const EdgeInsets.all(10),
+                          color: Colors.black,
+                          clipBehavior: Clip.hardEdge,
+                          child: Image.network(
+                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                          ),
+                        )),
                     ElevatedButton(
                         onPressed: () => {},
                         child: Card(
