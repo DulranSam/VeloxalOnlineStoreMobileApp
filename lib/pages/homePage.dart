@@ -139,8 +139,21 @@ class HomePage extends StatelessWidget {
               }
             },
           )),
+      bottomNavigationBar: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(label: "home", icon: Icon(Icons.home)),
+            BottomNavigationBarItem(label: "social", icon: Icon(Icons.people))
+          ],
+          currentIndex: selectedIndex,
+          onTap: (int index) {
+            setState(() {
+              selectedIndex = index;
+            });
+          }),
     );
   }
+
+  void setState(Null Function() param0) {}
 }
 
 class SecondRoute extends StatelessWidget {
