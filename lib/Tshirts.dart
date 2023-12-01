@@ -13,9 +13,11 @@ class TShirts extends StatelessWidget {
         children: [
           const Padding(
             padding: EdgeInsets.all(12),
-            child: Text(
-              "Hello Dulran, how may we help you?",
-              style: TextStyle(fontSize: 20),
+            child: Card(
+              child: Text(
+                "The velo supreme",
+                style: TextStyle(fontSize: 32),
+              ),
             ),
           ),
           const Padding(

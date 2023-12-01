@@ -1,7 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tshirts.dart';
+import 'package:flutter/animation.dart';
 
 class Mainfrfr extends StatefulWidget {
   const Mainfrfr({super.key});
@@ -50,6 +49,21 @@ class _MainfrfrState extends State<Mainfrfr> {
                                       appBar: AppBar(
                                         title: const Text("Hoodies"),
                                       ),
+                                      body: const SizedBox(
+                                          height: double.infinity,
+                                          width: double.infinity,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Hoodies",
+                                                style: TextStyle(fontSize: 32),
+                                              )
+                                            ],
+                                          )),
                                     );
                                   },
                                 ));
@@ -63,6 +77,21 @@ class _MainfrfrState extends State<Mainfrfr> {
                                       appBar: AppBar(
                                         title: const Text("Cases"),
                                       ),
+                                      body: const SizedBox(
+                                          height: double.infinity,
+                                          width: double.infinity,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Cases",
+                                                style: TextStyle(fontSize: 32),
+                                              )
+                                            ],
+                                          )),
                                     );
                                   },
                                 ));
@@ -76,6 +105,21 @@ class _MainfrfrState extends State<Mainfrfr> {
                                       appBar: AppBar(
                                         title: const Text("Shoes"),
                                       ),
+                                      body: const SizedBox(
+                                          height: double.infinity,
+                                          width: double.infinity,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Shoes",
+                                                style: TextStyle(fontSize: 32),
+                                              )
+                                            ],
+                                          )),
                                     );
                                   },
                                 ));
@@ -89,7 +133,7 @@ class _MainfrfrState extends State<Mainfrfr> {
                     ),
                     const Text(
                       "Featured",
-                      style: TextStyle(fontSize: 28),
+                      style: TextStyle(fontSize: 32),
                     ),
                     const Padding(padding: EdgeInsets.all(10)),
                     ElevatedButton(
@@ -98,8 +142,20 @@ class _MainfrfrState extends State<Mainfrfr> {
                           margin: const EdgeInsets.all(10),
                           color: Colors.black,
                           clipBehavior: Clip.hardEdge,
-                          child: Image.network(
-                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                          child: Column(
+                            children: [
+                              Image.network(
+                                "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                              ),
+                              const Text(
+                                "Main TShirt",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              const Text(
+                                "The main tshirt lol",
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
                           ),
                         )),
                     ElevatedButton(
@@ -108,30 +164,42 @@ class _MainfrfrState extends State<Mainfrfr> {
                           margin: const EdgeInsets.all(10),
                           color: Colors.black,
                           clipBehavior: Clip.hardEdge,
-                          child: Image.network(
-                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                          child: Column(
+                            children: [
+                              Image.network(
+                                "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                              ),
+                              const Text(
+                                "Main TShirt",
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              const Text(
+                                "The main tshirt lol",
+                                style: TextStyle(color: Colors.white),
+                              )
+                            ],
                           ),
                         )),
-                    ElevatedButton(
-                        onPressed: () => {},
-                        child: Card(
-                          margin: const EdgeInsets.all(10),
-                          color: Colors.black,
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.network(
-                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
-                          ),
-                        )),
-                    ElevatedButton(
-                        onPressed: () => {},
-                        child: Card(
-                          margin: const EdgeInsets.all(10),
-                          color: Colors.black,
-                          clipBehavior: Clip.hardEdge,
-                          child: Image.network(
-                            "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
-                          ),
-                        ))
+                    // ElevatedButton(
+                    //     onPressed: () => {},
+                    //     child: Card(
+                    //       margin: const EdgeInsets.all(10),
+                    //       color: Colors.black,
+                    //       clipBehavior: Clip.hardEdge,
+                    //       child: Image.network(
+                    //         "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                    //       ),
+                    //     )),
+                    // ElevatedButton(
+                    //     onPressed: () => {},
+                    //     child: Card(
+                    //       margin: const EdgeInsets.all(10),
+                    //       color: Colors.black,
+                    //       clipBehavior: Clip.hardEdge,
+                    //       child: Image.network(
+                    //         "https://img.freepik.com/free-psd/isolated-white-t-shirt-front-view_125540-1194.jpg?size=626&ext=jpg&ga=GA1.1.1803636316.1701043200&semt=ais",
+                    //       ),
+                    //     ))
                   ],
                 )),
           ],

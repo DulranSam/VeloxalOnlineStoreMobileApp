@@ -9,12 +9,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int selectedIndex = 0;
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text("Veloxal"),
+        leading:
+            ElevatedButton(onPressed: () {}, child: const Icon(Icons.menu)),
       ),
       body: Center(
+        heightFactor: double.infinity,
+        widthFactor: double.infinity,
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -34,9 +38,14 @@ class HomePage extends StatelessWidget {
                 "https://img.freepik.com/premium-vector/cute-orange-cat-waving-paw-cartoon-vector-illustration_42750-818.jpg?w=2000",
                 scale: 10,
               ),
-              const Text(
-                "Login",
-                style: TextStyle(fontSize: 32, color: Colors.black),
+              const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text(
+                    "Login",
+                    style: TextStyle(fontSize: 32),
+                  ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -70,7 +79,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Padding(padding: EdgeInsets.all(5)),
-              ElevatedButton(
+              FilledButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.black),
                 ),
@@ -93,7 +102,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     const Text("Not a user yet? "),
                     const Padding(padding: EdgeInsets.all(5)),
-                    ElevatedButton(
+                    FilledButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) {
@@ -144,7 +153,7 @@ class SecondRoute extends StatelessWidget {
         title: const Text('Second Route'),
       ),
       body: Center(
-        child: ElevatedButton(
+        child: FilledButton(
           onPressed: () {
             Navigator.pop(context);
           },

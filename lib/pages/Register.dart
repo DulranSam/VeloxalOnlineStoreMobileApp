@@ -17,11 +17,14 @@ class _RegisterState extends State<Register> {
         ),
       ),
       body: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        const Padding(padding: EdgeInsets.all(15)),
+        const Padding(
+          padding: EdgeInsets.all(15),
+        ),
         TextFormField(
           obscureText: true,
           decoration: const InputDecoration(
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.zero)),
               labelText: 'Create an username',
               labelStyle: TextStyle(color: Colors.black)),
         ),
