@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Tshirts.dart';
 import 'package:flutter/animation.dart';
+import 'package:flutter_application_1/pages/hoodies.dart';
 
 class Mainfrfr extends StatefulWidget {
   const Mainfrfr({super.key});
@@ -45,26 +46,7 @@ class _MainfrfrState extends State<Mainfrfr> {
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) {
-                                    return Scaffold(
-                                      appBar: AppBar(
-                                        title: const Text("Hoodies"),
-                                      ),
-                                      body: const SizedBox(
-                                          height: double.infinity,
-                                          width: double.infinity,
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                "Hoodies",
-                                                style: TextStyle(fontSize: 32),
-                                              )
-                                            ],
-                                          )),
-                                    );
+                                    return const Hoodies();
                                   },
                                 ));
                               },
